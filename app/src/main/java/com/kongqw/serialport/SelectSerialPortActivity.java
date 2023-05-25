@@ -1,11 +1,12 @@
 package com.kongqw.serialport;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.kongqw.serialport.adapter.DeviceAdapter;
 import com.kongqw.serialportlibrary.Device;
