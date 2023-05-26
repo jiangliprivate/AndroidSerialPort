@@ -68,7 +68,7 @@ public class SerialPortActivity extends AppCompatActivity implements OnOpenSeria
                         });
                     }
                 })
-                .openSerialPort(device.getFile(), 115200);
+                .openSerialPort(device.getFile(), 9600);
 
         Log.i(TAG, "onCreate: openSerialPort = " + openSerialPort);
     }
@@ -148,8 +148,8 @@ public class SerialPortActivity extends AppCompatActivity implements OnOpenSeria
             return;
         }
 
-        byte[] sendContentBytes = sendContent.getBytes();
-
+        //byte[] sendContentBytes = sendContent.getBytes();
+        byte[] sendContentBytes = ByteUtil.hexStr2bytes(sendContent);
         boolean sendBytes = mSerialPortManager.sendBytes(sendContentBytes);
         Log.i(TAG, "onSend: sendBytes = " + sendBytes);
         showToast(sendBytes ? "发送成功" : "发送失败");

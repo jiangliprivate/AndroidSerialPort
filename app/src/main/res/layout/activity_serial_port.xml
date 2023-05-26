@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="top"
+            android:text="011000060002040301E2406B51"
             android:hint="请输入发送内容，内容转 byte[] 发送"
             android:minLines="5" />
 
